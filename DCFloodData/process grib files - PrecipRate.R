@@ -6,8 +6,6 @@ library(stringr)
 library(terra)
 library(R.utils)
 
-setwd("C:\\Users\\vxb18\\OneDrive\\Desktop\\STAT 6289\\Project 1\\DCFloodData2")
-
 DCfloodtimes = read.csv("DC_flood_times.csv") %>% mutate(eventnum=row_number()) 
 gribInfo = function(path){
   path_list = str_split(path, "/")[[1]]

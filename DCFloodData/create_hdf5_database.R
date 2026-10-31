@@ -2,7 +2,6 @@ library(rhdf5)
 library(stringr)
 library(dplyr)
 library(lubridate)
-setwd("C:\\Users\\vxb18\\OneDrive\\Desktop\\STAT 6289\\Project 1\\DCFloodData2")
 
 if (file.exists("data/DCFloodEvents.h5")) {
   file.remove("data/DCFloodEvents.h5")

@@ -5,9 +5,6 @@ library(dataRetrieval)
 library(lubridate)
 library(stringr)
 
-Sys.setenv(API_USGS_PAT = "bFg9GwqBWQMpppWcCfkFkmcK9npPWnQg8MPLQGwj")
-setwd("C:\\Users\\vxb18\\OneDrive\\Desktop\\STAT 6289\\Project 1\\DCFloodData2")
-
 download_data = function(startDate, startTime, endDate, endTime, folder) {
   startMinutes = as.numeric(str_sub(startTime, 4,5))
   if (!(startMinutes %% 2==0)) {
