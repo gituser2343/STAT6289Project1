@@ -1,4 +1,7 @@
+Description of files and folders
+
 DC_flood_times.csv                                
+File with events
                    
 Programs to download data and create an rds file in data folder.  Each type can be run independently but if there are two programs first run download then process.   
 1. download - multisensor.R 
