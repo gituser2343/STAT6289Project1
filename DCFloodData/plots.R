@@ -58,8 +58,8 @@ retrieve_time_series('FlowRate', 100, c('2020-12-25 03:46:00','2020-12-25 03:51:
 #Plot a stored time series with appropriate time-zone labels, units, and missing-data indications.
 visualize_time_series = function(source, target_event, time_window, measure, title){
   df1 = retrieve_time_series(source, target_event, time_window)
-  min = as.POSIXct(min(df$time_edt), tz = "America/New_York")
-  max = as.POSIXct(max(df$time_edt), tz = "America/New_York")
+  min = as.POSIXct(min(df1$time_edt), tz = "America/New_York")
+  max = as.POSIXct(max(df1$time_edt), tz = "America/New_York")
   title = paste(title, format(min, '%B %e, %Y %I:%M:%S %p'), 'to', 
   format(max, '%B %e, %Y %I:%M:%S %p'))
 ggplot(df1, aes(x = time_edt, y = value, color = location, group = location)) +
